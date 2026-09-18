@@ -1,5 +1,26 @@
 ## In verification
 
+### JSP-000586 — existing complete proof registration
+
+- Correspondence: JSP-000586 ↔ Erdős Problem 718
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Terminal theorem: `Erdos718.erdos_718`
+- Evidence: [evidence/JSP-000586.md](evidence/JSP-000586.md)
+- Awards fork branch: `Sprie/awards:jsp-000586-register-existing-lean`
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35325294376 — running
+- Competition check: no matching JSP-000586 PR or open issue found.
+
+### JSP-000590 — existing complete proof registration
+
+- Correspondence: JSP-000590 ↔ Erdős Problem 722
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Terminal theorem: `Erdos722.erdos_722`
+- Evidence: [evidence/JSP-000590.md](evidence/JSP-000590.md)
+- Awards fork branch: `Sprie/awards:jsp-000590-register-existing-lean`
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35325433409 — running
+- Competition check: no matching JSP-000590 PR or open issue found.
+
+
 ### JSP-000085 — complete Erdős discrepancy proof registration
 
 - Correspondence: JSP-000085 ↔ Erdős Problem 67
