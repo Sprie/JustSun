@@ -1,5 +1,8 @@
 ## In verification
 
+
+## Ready for upstream submission
+
 ### JSP-000679 — existing complete proof registration
 
 - Correspondence: JSP-000679 ↔ Erdős Problem 823
@@ -7,8 +10,16 @@
 - Terminal theorem: `Erdos823.erdos_823`
 - Evidence: [evidence/JSP-000679.md](evidence/JSP-000679.md)
 - Awards fork branch: `Sprie/awards:jsp-000679-register-existing-lean`
-- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35332866217 — running
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35332866217 — success
+- Axioms: `[propext, Classical.choice, Quot.sound]`
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35347206699 — success
+- Final awards branch head: `47b36200a2c2fc233849e02dcef5deefe5d57daa`
+- Final diff: 2 files, +4/-3, catalog/index metadata only.
+- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000679-register-existing-lean?expand=1
 - Competition check: no matching JSP-000679 PR or open issue found.
+
+
+
 
 
 ### JSP-000664 — existing complete proof registration
@@ -19,12 +30,17 @@
 - Stronger theorem: `Erdos807.alon_bohman_huang`
 - Evidence: [evidence/JSP-000664.md](evidence/JSP-000664.md)
 - Awards fork branch: `Sprie/awards:jsp-000664-register-existing-lean`
-- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35332634365 — running
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35332634365 — success
+- Axioms: `[propext, Classical.choice, Quot.sound]`
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35347206699 — success
+- Final awards branch head: `1f38b5113f78cba74a982c0bb2871b3a2afc0c9f`
+- Final diff: 2 files, +4/-3, catalog/index metadata only.
+- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000664-register-existing-lean?expand=1
 - Competition check: no matching JSP-000664 PR or open issue found.
 
 
 
-## Ready for upstream submission
+
 
 
 # Participation status
