@@ -1,5 +1,18 @@
 ## In verification
 
+### JSP-000615 — existing complete proof registration
+
+- Correspondence: JSP-000615 ↔ Erdős Problem 747 (Shamir's problem)
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Terminal theorem: `Erdos747.erdos_747`
+- Median-threshold theorem: `Erdos747.erdos747_asymptotic`
+- Evidence: [evidence/JSP-000615.md](evidence/JSP-000615.md)
+- Awards fork branch: `Sprie/awards:jsp-000615-register-existing-lean`
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35330430815 — success
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35330312399 — running
+- Competition check: no matching JSP-000615 PR or open issue found.
+
+
 
 
 ## Ready for upstream submission
