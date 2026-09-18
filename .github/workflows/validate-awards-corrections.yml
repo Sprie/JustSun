@@ -26,6 +26,10 @@ jobs:
             branch: jsp-000916-register-existing-lean
           - label: JSP-000568
             branch: jsp-000568-register-full-existing-lean
+          - label: JSP-000586
+            branch: jsp-000586-register-existing-lean
+          - label: JSP-000590
+            branch: jsp-000590-register-existing-lean
           - label: JSP-000861
             branch: jsp-000861-register-erdos1038-solution
     runs-on: ubuntu-latest
@@ -72,7 +76,7 @@ jobs:
         working-directory: awards
         run: git diff --check
 
-# refresh: JSP-000568 final verified evidence
+# refresh: JSP-000586 and JSP-000590 validation branches
 # refresh: JSP-000173 existing-proof correction branch
 # final refresh: JSP-000173 green evidence pin
 # refresh: JSP-000085 existing-proof correction branch
