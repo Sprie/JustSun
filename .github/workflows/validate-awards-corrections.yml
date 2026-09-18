@@ -1,0 +1,49 @@
+name: Validate awards correction branches
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/validate-awards-corrections.yml"
+
+jobs:
+  validate:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: JSP-000699
+            branch: jsp-000699-register-existing-lean
+          - label: JSP-000747
+            branch: jsp-000747-register-existing-lean
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Checkout Sprie awards branch
+        run: |
+          git clone --depth 1 --branch "${{ matrix.branch }}" https://github.com/Sprie/awards.git awards
+
+      - name: Validate records
+        working-directory: awards
+        run: python scripts/manage.py validate
+
+      - name: Validate links
+        working-directory: awards
+        run: python scripts/manage.py links
+
+      - name: Build generated data
+        working-directory: awards
+        run: python scripts/manage.py build
+
+      - name: Check generated consistency
+        working-directory: awards
+        run: python scripts/manage.py check
+
+      - name: Run unit tests
+        working-directory: awards
+        run: python -m unittest discover -s tests -v
+
+      - name: Diff hygiene
+        working-directory: awards
+        run: git diff --check
