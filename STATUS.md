@@ -1,5 +1,17 @@
 ## In verification
 
+### JSP-000664 — existing complete proof registration
+
+- Correspondence: JSP-000664 ↔ Erdős Problem 807
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Comparator-selected theorem: `Erdos807.not_erdos_807`
+- Stronger theorem: `Erdos807.alon_bohman_huang`
+- Evidence: [evidence/JSP-000664.md](evidence/JSP-000664.md)
+- Awards fork branch: `Sprie/awards:jsp-000664-register-existing-lean`
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35332634365 — running
+- Competition check: no matching JSP-000664 PR or open issue found.
+
+
 
 ## Ready for upstream submission
 
