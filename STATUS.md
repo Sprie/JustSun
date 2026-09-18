@@ -8,12 +8,20 @@
 - Additional selected roots: `Erdos745.erdos_745_supercritical`, `Erdos745.erdos745_noncritical_asymptotic`, `Erdos745.erdos745_noncritical`
 - Evidence: [evidence/JSP-000613.md](evidence/JSP-000613.md)
 - Awards fork branch: `Sprie/awards:jsp-000613-register-existing-lean`
-- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35331315992 — running
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35331315992 — success
+- Axioms for all four selected roots: `[propext, Classical.choice, Quot.sound]`
 - Competition check: no matching JSP-000613 PR or open issue found.
 
 
 
 ## Ready for upstream submission
+
+
+# Participation status
+
+This repository tracks Sprie's participation work for The Justin Sun Prize.
+
+## Submitted upstream
 
 ### JSP-000615 — existing complete proof registration
 
@@ -28,8 +36,9 @@
 - Axioms for both audited theorems: `[propext, Classical.choice, Quot.sound]`
 - Final awards branch head: `592c8173a2fe8439b8251fd2f6f43bcd8a161c19`
 - Final diff: 2 files, +4/-3, catalog/index metadata only.
-- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000615-register-existing-lean?expand=1
-- Competition check: no matching JSP-000615 PR or open issue found.
+- Upstream PR: https://github.com/TheJustinSunPrize/awards/pull/1148
+- PR head: `592c8173a2fe8439b8251fd2f6f43bcd8a161c19`; final diff: 2 files, +4/-3; mergeable and non-draft at submission time.
+- Official upstream workflows currently report `action_required`, consistent with maintainer approval being required before fork workflows run.
 
 
 
@@ -38,11 +47,6 @@
 
 
 
-# Participation status
-
-This repository tracks Sprie's participation work for The Justin Sun Prize.
-
-## Submitted upstream
 
 ### JSP-000085 — complete Erdős discrepancy proof registration
 
