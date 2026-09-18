@@ -1,0 +1,50 @@
+name: Verify JSP-000861 / Erdos 1038 candidate
+
+on:
+  push:
+    paths:
+      - "evidence/JSP-000861.md"
+      - ".github/workflows/verify-jsp-000861.yml"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl https://elan.lean-lang.org/elan-init.sh -sSf | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Fetch pinned upstream proof
+        run: |
+          git clone --filter=blob:none https://github.com/plby/lean-proofs.git upstream
+          cd upstream
+          git checkout 8822f7ddef30fadbd92e1c6ab4ed897af356af5e
+          test "$(git rev-parse HEAD)" = "8822f7ddef30fadbd92e1c6ab4ed897af356af5e"
+
+      - name: Resolve pinned dependencies
+        working-directory: upstream/src/latest
+        run: lake update
+
+      - name: Fetch Mathlib cache
+        working-directory: upstream/src/latest
+        run: lake exe cache get
+
+      - name: Build Erdos1038
+        working-directory: upstream/src/latest
+        run: lake build ErdosProblems.Erdos1038
+
+      - name: Axiom audit
+        working-directory: upstream/src/latest
+        run: |
+          cat > Audit1038.lean <<'EOF'
+          import ErdosProblems.Erdos1038
+          #check Erdos1038.erdos_1038
+          #check Erdos1038.mainTheorem
+          #print axioms Erdos1038.erdos_1038
+          #print axioms Erdos1038.mainTheorem
+          EOF
+          lake env lean Audit1038.lean
