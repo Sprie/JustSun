@@ -22,11 +22,23 @@ jobs:
 
       - name: Checkout Sprie awards branch
         run: |
-          git clone --depth 1 --branch "${{ matrix.branch }}" https://github.com/Sprie/awards.git awards
+          git clone --branch "${{ matrix.branch }}" https://github.com/Sprie/awards.git awards
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install official validation dependencies
+        working-directory: awards
+        run: python -m pip install -r requirements.txt
 
       - name: Validate records
         working-directory: awards
         run: python scripts/manage.py validate
+
+      - name: Validate history against upstream base
+        working-directory: awards
+        run: python scripts/manage.py history --base ff33abd13163e789790eb1014e55f57c05f94432
 
       - name: Validate links
         working-directory: awards
