@@ -1,6 +1,9 @@
 ## In verification
 
 
+
+## Ready for upstream submission
+
 ### JSP-000590 — existing complete proof registration
 
 - Correspondence: JSP-000590 ↔ Erdős Problem 722
@@ -8,11 +11,15 @@
 - Terminal theorem: `Erdos722.erdos_722`
 - Evidence: [evidence/JSP-000590.md](evidence/JSP-000590.md)
 - Awards fork branch: `Sprie/awards:jsp-000590-register-existing-lean`
-- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35325433409 — running
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35325433409 — success
+- Axioms: `[propext, Classical.choice, Quot.sound]`
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35326976219 — success
+- Final awards branch head: `c10676b6c76c31f93f967a635272b431e157e0bf`
+- Final diff: 2 files, +4/-3, catalog/index metadata only.
+- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000590-register-existing-lean?expand=1
 - Competition check: no matching JSP-000590 PR or open issue found.
 
 
-## Ready for upstream submission
 
 ### JSP-000085 — complete Erdős discrepancy proof registration
 
