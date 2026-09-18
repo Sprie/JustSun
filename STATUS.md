@@ -1,3 +1,16 @@
+## In verification
+
+### JSP-000085 — complete Erdős discrepancy proof registration
+
+- Correspondence: JSP-000085 ↔ Erdős Problem 67
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Terminal theorem: `erdos_67`
+- Evidence: [evidence/JSP-000085.md](evidence/JSP-000085.md)
+- PR draft: [submissions/JSP-000085-PR.md](submissions/JSP-000085-PR.md)
+- Awards fork branch: `Sprie/awards:jsp-000085-register-existing-lean`
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35324414655 — running
+- Prior PR #934 was withdrawn after its separate formalization was found to rely on local axioms; no open JSP-000085 PR or issue was found before this registration.
+
 ## Ready for upstream submission
 
 ### JSP-000173 — complete Fox--Pohoata proof registration
