@@ -1,0 +1,49 @@
+name: Verify JSP-000699 upstream proof
+
+on:
+  push:
+    paths:
+      - "evidence/JSP-000699.md"
+      - ".github/workflows/verify-jsp-000699.yml"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout evidence repository
+        uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl https://elan.lean-lang.org/elan-init.sh -sSf | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Fetch pinned upstream proof
+        run: |
+          git clone --filter=blob:none https://github.com/plby/lean-proofs.git upstream
+          cd upstream
+          git checkout 7d97d48c60396d8ca2ba67298a296749a8e0fe0b
+          test "$(git rev-parse HEAD)" = "7d97d48c60396d8ca2ba67298a296749a8e0fe0b"
+
+      - name: Resolve pinned dependencies
+        working-directory: upstream/src/latest
+        run: lake update
+
+      - name: Fetch Mathlib cache
+        working-directory: upstream/src/latest
+        run: lake exe cache get
+
+      - name: Build Erdos843
+        working-directory: upstream/src/latest
+        run: lake build ErdosProblems.Erdos843
+
+      - name: Axiom audit
+        working-directory: upstream/src/latest
+        run: |
+          cat > Audit843.lean <<'EOF'
+          import ErdosProblems.Erdos843
+          #check Erdos843.erdos_843
+          #print axioms Erdos843.erdos_843
+          EOF
+          lake env lean Audit843.lean
