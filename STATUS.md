@@ -19,6 +19,17 @@ Sprie does **not** claim mathematical-solution or Lean-formalization authorship.
 - Proof reproduction CI: https://github.com/Sprie/JustSun/actions/runs/35317022453 — success, 8790 jobs
 - Awards catalog validation: https://github.com/Sprie/JustSun/actions/runs/35317085977 — success
 
+## In verification
+
+### JSP-000916 — existing-proof evidence registration
+
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Main theorems: `Erdos1105.erdos_1105`; `Erdos1105.erdos_1105_paths`
+- Evidence: [evidence/JSP-000916.md](evidence/JSP-000916.md)
+- Formal authors in pinned upstream metadata: Codex; GPT-5.6 Sol
+- Exact upstream competition check at preparation time: no matching JSP-000916 PR or issue
+- Proof reproduction CI: https://github.com/Sprie/JustSun/actions/runs/35318007706 — running
+
 ## Submitted upstream
 
 ### JSP-000699 — existing-proof evidence registration
