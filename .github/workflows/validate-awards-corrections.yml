@@ -20,6 +20,8 @@ jobs:
             branch: jsp-000747-register-existing-lean
           - label: JSP-000916
             branch: jsp-000916-register-existing-lean
+          - label: JSP-000861
+            branch: jsp-000861-register-erdos1038-solution
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -64,4 +66,4 @@ jobs:
         working-directory: awards
         run: git diff --check
 
-# refresh: JSP-000916 validation branch
+# refresh: JSP-000861 candidate correction branch
