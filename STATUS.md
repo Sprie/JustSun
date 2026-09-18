@@ -1,5 +1,18 @@
 ## In verification
 
+### JSP-000173 — complete Fox--Pohoata proof registration
+
+- Correspondence: JSP-000173 ↔ Erdős Problem 179
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Terminal theorem: `Erdos179.erdos_179`
+- Evidence: [evidence/JSP-000173.md](evidence/JSP-000173.md)
+- PR draft: [submissions/JSP-000173-PR.md](submissions/JSP-000173-PR.md)
+- Awards fork branch: `Sprie/awards:jsp-000173-register-existing-lean`
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35323712973 — success
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35323565421 — running
+- Prior PR #999 was withdrawn after its separate formalization was found to rely on local axioms; no open JSP-000173 PR or issue was found before this registration.
+
+
 ### JSP-000568 — complete Hall phase-transition proof registration
 
 - Correspondence: JSP-000568 ↔ Erdős 697
