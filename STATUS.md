@@ -1,5 +1,8 @@
 ## In verification
 
+
+## Ready for upstream submission
+
 ### JSP-000613 — existing complete proof registration
 
 - Correspondence: JSP-000613 ↔ Erdős Problem 745
@@ -10,11 +13,15 @@
 - Awards fork branch: `Sprie/awards:jsp-000613-register-existing-lean`
 - Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35331315992 — success
 - Axioms for all four selected roots: `[propext, Classical.choice, Quot.sound]`
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35331847773 — success
+- Final awards branch head: `59eb5663c25212d48aed11d836d7130a1d44d364`
+- Final diff: 2 files, +4/-3, catalog/index metadata only.
+- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000613-register-existing-lean?expand=1
 - Competition check: no matching JSP-000613 PR or open issue found.
 
 
 
-## Ready for upstream submission
+
 
 
 # Participation status
