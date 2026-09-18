@@ -2,7 +2,7 @@
 
 This repository tracks Sprie's participation work for The Justin Sun Prize.
 
-## Ready for upstream submission
+## Submitted upstream
 
 ### JSP-000699 — existing-proof evidence registration
 
@@ -16,10 +16,13 @@ Sprie does **not** claim mathematical-solution or Lean-formalization authorship.
 - Reproduction CI: https://github.com/Sprie/JustSun/actions/runs/35305353679
 - Axioms: `[propext, Classical.choice, Quot.sound]`
 - Evidence: [evidence/JSP-000699.md](evidence/JSP-000699.md)
+- Upstream PR: https://github.com/TheJustinSunPrize/awards/pull/1083
 - PR text: [submissions/JSP-000699-PR.md](submissions/JSP-000699-PR.md)
 - Awards fork branch: `Sprie/awards:jsp-000699-register-existing-lean`
 - Awards validation: https://github.com/Sprie/JustSun/actions/runs/35305855496
 - Last competition check before this status update: no matching upstream PR or issue found.
+
+## Do not duplicate upstream
 
 ### JSP-000747 — existing-proof evidence registration
 
@@ -34,7 +37,9 @@ Sprie does **not** claim mathematical-solution or Lean-formalization authorship.
 - Build: 8781 jobs completed successfully
 - Axioms: `[propext, Classical.choice, Quot.sound]`
 - Evidence: [evidence/JSP-000747.md](evidence/JSP-000747.md)
-- PR text: [submissions/JSP-000747-PR.md](submissions/JSP-000747-PR.md)
+- Existing upstream PR by another contributor: https://github.com/TheJustinSunPrize/awards/pull/1040
+- Decision: do **not** open a duplicate PR; keep Sprie's reproduction as independent verification evidence only.
+- PR text retained for archive: [submissions/JSP-000747-PR.md](submissions/JSP-000747-PR.md)
 - Awards fork branch: `Sprie/awards:jsp-000747-register-existing-lean`
 - Awards validation: https://github.com/Sprie/JustSun/actions/runs/35305855496
 - Last competition check before this status update: no matching upstream PR or issue found.
