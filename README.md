@@ -43,3 +43,10 @@ The Lean formalization in this repository is developed under the GitHub account
 [`ATTRIBUTION.md`](ATTRIBUTION.md).
 
 This repository does not claim discovery of the mathematical counterexample.
+
+## Evidence / correction work
+
+- **JSP-000699 / Erdős 843** — located and reproducing an existing complete
+  Lean formalization that is not yet reflected in the JSP catalog. See
+  [`evidence/JSP-000699.md`](evidence/JSP-000699.md). This is evidence-registration
+  work; upstream mathematical and formalization attribution is preserved.
