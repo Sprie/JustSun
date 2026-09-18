@@ -2,6 +2,22 @@
 
 This repository tracks Sprie's participation work for The Justin Sun Prize.
 
+## In verification
+
+### JSP-000517 — existing-proof evidence registration
+
+Role of Sprie: **source discovery, statement correspondence review, reproducible verification, catalog correction**.
+
+Sprie does **not** claim mathematical-solution or Lean-formalization authorship.
+
+- Upstream proof repository: `plby/lean-proofs`
+- Pinned upstream snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Main theorem: `Erdos636.erdos_636`
+- Evidence: [evidence/JSP-000517.md](evidence/JSP-000517.md)
+- Awards fork branch: `Sprie/awards:jsp-000517-register-existing-lean`
+- Proof reproduction CI: running
+- Awards catalog validation: running/pending
+
 ## Submitted upstream
 
 ### JSP-000699 — existing-proof evidence registration
