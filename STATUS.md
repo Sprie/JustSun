@@ -9,7 +9,8 @@
 - Evidence: [evidence/JSP-000615.md](evidence/JSP-000615.md)
 - Awards fork branch: `Sprie/awards:jsp-000615-register-existing-lean`
 - Awards validation: https://github.com/Sprie/JustSun/actions/runs/35330430815 — success
-- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35330312399 — running
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35330312399 — success
+- Axioms for both audited theorems: `[propext, Classical.choice, Quot.sound]`
 - Competition check: no matching JSP-000615 PR or open issue found.
 
 
@@ -17,6 +18,13 @@
 
 ## Ready for upstream submission
 
+
+
+# Participation status
+
+This repository tracks Sprie's participation work for The Justin Sun Prize.
+
+## Submitted upstream
 
 ### JSP-000085 — complete Erdős discrepancy proof registration
 
@@ -32,16 +40,12 @@
 - Prior PR #934 was withdrawn after its separate formalization was found to rely on local axioms; no open JSP-000085 PR or issue was found before this registration.
 - Final awards branch head: `dcaaa0420149739232b77aeebbbebbe3ff6da887`
 - Final diff: 1 file, catalog metadata only.
-- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000085-register-existing-lean?expand=1
-- Upstream PR creation through the connected GitHub integration is not permitted; the branch is ready for manual PR creation from the compare page.
+- Upstream PR: https://github.com/TheJustinSunPrize/awards/pull/1145
+- PR head: `dcaaa0420149739232b77aeebbbebbe3ff6da887`; final diff: 1 file, +3/-2; mergeable and non-draft at submission time.
+- Official upstream workflows currently report `action_required`, consistent with maintainer approval being required before fork workflows run.
 
 
 
-# Participation status
-
-This repository tracks Sprie's participation work for The Justin Sun Prize.
-
-## Submitted upstream
 
 ### JSP-000590 — existing complete proof registration
 
