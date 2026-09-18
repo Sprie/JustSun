@@ -32,6 +32,13 @@
 - Upstream PR creation through the connected GitHub integration is not permitted; the branch is ready for manual PR creation from the compare page.
 
 
+
+# Participation status
+
+This repository tracks Sprie's participation work for The Justin Sun Prize.
+
+## Submitted upstream
+
 ### JSP-000586 — existing complete proof registration
 
 - Correspondence: JSP-000586 ↔ Erdős Problem 718
@@ -44,16 +51,11 @@
 - Awards validation: https://github.com/Sprie/JustSun/actions/runs/35325827031 — success
 - Final awards branch head: `1973bd0a5729a13f82b1faf62d2347c0350c143f`
 - Final diff: 2 files, +4/-3, catalog/index metadata only.
-- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000586-register-existing-lean?expand=1
-- Competition check: no matching JSP-000586 PR or open issue found.
+- Upstream PR: https://github.com/TheJustinSunPrize/awards/pull/1128
+- Official upstream workflows currently report `action_required`, consistent with maintainer approval being required before fork workflows run.
 
 
 
-# Participation status
-
-This repository tracks Sprie's participation work for The Justin Sun Prize.
-
-## Submitted upstream
 
 
 ### JSP-000173 — complete Fox--Pohoata proof registration
