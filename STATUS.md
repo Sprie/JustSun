@@ -1,3 +1,17 @@
+## In verification
+
+### JSP-000568 — complete Hall phase-transition proof registration
+
+- Correspondence: JSP-000568 ↔ Erdős 697
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Terminal theorems: `Erdos697.erdos_697`; `Erdos697.erdos_697_sharp_transition`
+- Evidence: [evidence/JSP-000568.md](evidence/JSP-000568.md)
+- Awards fork branch: `Sprie/awards:jsp-000568-register-full-existing-lean`
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35322545096 — success
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35322307299 — running
+- Existing PR #506 is partial only and explicitly excludes Hall's critical exponent and both phase-transition limits.
+
+
 # Participation status
 
 This repository tracks Sprie's participation work for The Justin Sun Prize.
