@@ -2,27 +2,27 @@
 
 This repository tracks Sprie's participation work for The Justin Sun Prize.
 
-## In verification
+## Submitted upstream
 
-### JSP-000861 — candidate status-and-proof correction
+### JSP-000861 — complete-solution and Lean-formalization evidence registration
 
-Role of Sprie: **source discovery, statement correspondence review, reproducible verification, catalog-status audit**.
+Role of Sprie: **source discovery, statement correspondence review, reproducible source verification, catalog correction**.
 
-This is not yet prepared for upstream submission because the official catalog currently marks the problem `Open`.
+Sprie does **not** claim mathematical-solution or Lean-formalization authorship.
 
 - Candidate correspondence: JSP-000861 ↔ Erdős Problem 1038
-- Catalog wording: monic real-rooted polynomial; total length where `|f(x)| < 1`
-- Formal Conjectures normalization: monic, nonconstant, all roots real and contained in `[-1,1]`
 - Original complete-proof commit: `ShouqiaoW/erdos@dc20752268ede5a3548e3d63ae74e45c3cfcf78c`
 - Integrated proof snapshot: `plby/lean-proofs@8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
 - Main theorem: `Erdos1038.erdos_1038`
 - Strong theorem: `Erdos1038.mainTheorem`
 - Evidence: [evidence/JSP-000861.md](evidence/JSP-000861.md)
-- Proof reproduction CI: https://github.com/Sprie/JustSun/actions/runs/35319803720 — running
-- Exact upstream competition check: no matching JSP-000861 PR or open issue found.
-- Decision gate: do not alter the awards catalog until kernel reproduction and source-scope review are complete.
-
-## Submitted upstream
+- PR text: [submissions/JSP-000861-PR.md](submissions/JSP-000861-PR.md)
+- Upstream PR: https://github.com/TheJustinSunPrize/awards/pull/1114
+- Source-evidence CI: https://github.com/Sprie/JustSun/actions/runs/35322190380 — success
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35322268817 — success
+- Final upstream diff at submission: 1 file, +4/-3; PR mergeable and non-draft.
+- Official upstream workflows currently report `action_required` with zero jobs started, consistent with maintainer approval being required before fork workflows run.
+- No maintainer comments, reviews, or review threads at the latest check.
 
 ### JSP-000916 — existing-proof evidence registration
 
