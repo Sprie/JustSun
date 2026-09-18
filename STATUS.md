@@ -2,16 +2,26 @@
 
 This repository tracks Sprie's participation work for The Justin Sun Prize.
 
-## In verification
+## Ready for upstream submission
 
 ### JSP-000916 — existing-proof evidence registration
+
+Role of Sprie: **source discovery, statement correspondence review, reproducible verification, catalog correction**.
+
+Sprie does **not** claim mathematical-solution or Lean-formalization authorship.
 
 - Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
 - Main theorems: `Erdos1105.erdos_1105`; `Erdos1105.erdos_1105_paths`
 - Evidence: [evidence/JSP-000916.md](evidence/JSP-000916.md)
 - Formal authors in pinned upstream metadata: Codex; GPT-5.6 Sol
-- Exact upstream competition check at preparation time: no matching JSP-000916 PR or issue
-- Proof reproduction CI: https://github.com/Sprie/JustSun/actions/runs/35318007706 — running
+- Proof reproduction CI: https://github.com/Sprie/JustSun/actions/runs/35318007706 — success, 8909 jobs
+- Axioms for both terminal theorems: `[propext, Classical.choice, Quot.sound]`
+- Awards fork branch: `Sprie/awards:jsp-000916-register-existing-lean`
+- Awards branch head: `d84ccc5799cf805e8636a1485a0a8bbe7b3988ad`
+- PR text: [submissions/JSP-000916-PR.md](submissions/JSP-000916-PR.md)
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35319380858 — success
+- Final diff: only `problems/README.md` and `problems/catalog-0901-1000.md`, +4/-3.
+- Last upstream competition check: no matching JSP-000916 PR or open issue found.
 
 ## Submitted upstream
 
