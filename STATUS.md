@@ -1,14 +1,5 @@
 ## In verification
 
-### JSP-000586 — existing complete proof registration
-
-- Correspondence: JSP-000586 ↔ Erdős Problem 718
-- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
-- Terminal theorem: `Erdos718.erdos_718`
-- Evidence: [evidence/JSP-000586.md](evidence/JSP-000586.md)
-- Awards fork branch: `Sprie/awards:jsp-000586-register-existing-lean`
-- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35325294376 — running
-- Competition check: no matching JSP-000586 PR or open issue found.
 
 ### JSP-000590 — existing complete proof registration
 
@@ -33,6 +24,22 @@
 - Prior PR #934 was withdrawn after its separate formalization was found to rely on local axioms; no open JSP-000085 PR or issue was found before this registration.
 
 ## Ready for upstream submission
+
+### JSP-000586 — existing complete proof registration
+
+- Correspondence: JSP-000586 ↔ Erdős Problem 718
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Terminal theorem: `Erdos718.erdos_718`
+- Evidence: [evidence/JSP-000586.md](evidence/JSP-000586.md)
+- Awards fork branch: `Sprie/awards:jsp-000586-register-existing-lean`
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35325294376 — success
+- Axioms: `[propext, Classical.choice, Quot.sound]`
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35325827031 — success
+- Final awards branch head: `1973bd0a5729a13f82b1faf62d2347c0350c143f`
+- Final diff: 2 files, +4/-3, catalog/index metadata only.
+- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000586-register-existing-lean?expand=1
+- Competition check: no matching JSP-000586 PR or open issue found.
+
 
 
 ### JSP-000173 — complete Fox--Pohoata proof registration
