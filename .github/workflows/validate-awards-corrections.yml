@@ -18,6 +18,8 @@ jobs:
             branch: jsp-000699-register-existing-lean
           - label: JSP-000747
             branch: jsp-000747-register-existing-lean
+          - label: JSP-000916
+            branch: jsp-000916-register-existing-lean
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -62,4 +64,4 @@ jobs:
         working-directory: awards
         run: git diff --check
 
-# refresh: JSP-000517 immutable final branch
+# refresh: JSP-000916 validation branch
