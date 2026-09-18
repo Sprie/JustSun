@@ -1,5 +1,17 @@
 ## In verification
 
+### JSP-000704 — existing complete proof registration
+
+- Correspondence: JSP-000704 ↔ Erdős Problem 851
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Terminal theorem: `Erdos851.erdos_851`
+- Evidence: [evidence/JSP-000704.md](evidence/JSP-000704.md)
+- Awards fork branch: `Sprie/awards:jsp-000704-register-existing-lean`
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35347782195 — running
+- Attribution note: awards catalog says Liam Price; pinned Lean/source metadata say Lisa Price. This correction leaves solver credit unchanged and flags the discrepancy for maintainer review.
+- Competition check: no matching JSP-000704 / Erdos851 PR or open issue found.
+
+
 
 ## Ready for upstream submission
 
