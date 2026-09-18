@@ -50,3 +50,7 @@ This repository does not claim discovery of the mathematical counterexample.
   Lean formalization that is not yet reflected in the JSP catalog. See
   [`evidence/JSP-000699.md`](evidence/JSP-000699.md). This is evidence-registration
   work; upstream mathematical and formalization attribution is preserved.
+
+- **JSP-000747 / Erdős 896** — located and reproducing an existing complete
+  Lean formalization omitted from the current JSP catalog. See
+  [`evidence/JSP-000747.md`](evidence/JSP-000747.md). Upstream attribution is preserved.
