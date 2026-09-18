@@ -4,22 +4,6 @@
 
 ## Ready for upstream submission
 
-### JSP-000590 — existing complete proof registration
-
-- Correspondence: JSP-000590 ↔ Erdős Problem 722
-- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
-- Terminal theorem: `Erdos722.erdos_722`
-- Evidence: [evidence/JSP-000590.md](evidence/JSP-000590.md)
-- Awards fork branch: `Sprie/awards:jsp-000590-register-existing-lean`
-- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35325433409 — success
-- Axioms: `[propext, Classical.choice, Quot.sound]`
-- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35326976219 — success
-- Final awards branch head: `c10676b6c76c31f93f967a635272b431e157e0bf`
-- Final diff: 2 files, +4/-3, catalog/index metadata only.
-- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000590-register-existing-lean?expand=1
-- Competition check: no matching JSP-000590 PR or open issue found.
-
-
 
 ### JSP-000085 — complete Erdős discrepancy proof registration
 
@@ -45,6 +29,25 @@
 This repository tracks Sprie's participation work for The Justin Sun Prize.
 
 ## Submitted upstream
+
+### JSP-000590 — existing complete proof registration
+
+- Correspondence: JSP-000590 ↔ Erdős Problem 722
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Terminal theorem: `Erdos722.erdos_722`
+- Evidence: [evidence/JSP-000590.md](evidence/JSP-000590.md)
+- Awards fork branch: `Sprie/awards:jsp-000590-register-existing-lean`
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35325433409 — success
+- Axioms: `[propext, Classical.choice, Quot.sound]`
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35326976219 — success
+- Final awards branch head: `c10676b6c76c31f93f967a635272b431e157e0bf`
+- Final diff: 2 files, +4/-3, catalog/index metadata only.
+- Upstream PR: https://github.com/TheJustinSunPrize/awards/pull/1144
+- PR head: `56671e4e350dfa17f973dfd7f6f213a1fcd4746c`; final diff: 2 files, +4/-3; mergeable and non-draft at submission time.
+- Official upstream workflows currently report `action_required`, consistent with maintainer approval being required before fork workflows run.
+
+
+
 
 ### JSP-000586 — existing complete proof registration
 
