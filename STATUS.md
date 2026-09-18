@@ -1,5 +1,16 @@
 ## In verification
 
+### JSP-000679 — existing complete proof registration
+
+- Correspondence: JSP-000679 ↔ Erdős Problem 823
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Terminal theorem: `Erdos823.erdos_823`
+- Evidence: [evidence/JSP-000679.md](evidence/JSP-000679.md)
+- Awards fork branch: `Sprie/awards:jsp-000679-register-existing-lean`
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35332866217 — running
+- Competition check: no matching JSP-000679 PR or open issue found.
+
+
 ### JSP-000664 — existing complete proof registration
 
 - Correspondence: JSP-000664 ↔ Erdős Problem 807
