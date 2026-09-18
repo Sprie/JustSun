@@ -39,7 +39,8 @@
 - Evidence: [evidence/JSP-000568.md](evidence/JSP-000568.md)
 - Awards fork branch: `Sprie/awards:jsp-000568-register-full-existing-lean`
 - Awards validation: https://github.com/Sprie/JustSun/actions/runs/35322545096 — success
-- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35322307299 — running
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35322307299 — success
+- Axioms for both terminal theorems: `[propext, Classical.choice, Quot.sound]`
 - Existing PR #506 is partial only and explicitly excludes Hall's critical exponent and both phase-transition limits.
 
 
