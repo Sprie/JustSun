@@ -56,6 +56,8 @@ This repository tracks Sprie's participation work for The Justin Sun Prize.
 
 
 
+
+
 ### JSP-000615 — existing complete proof registration
 
 - Correspondence: JSP-000615 ↔ Erdős Problem 747 (Shamir's problem)
