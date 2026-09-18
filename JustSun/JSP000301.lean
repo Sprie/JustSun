@@ -1,5 +1,12 @@
 import Mathlib
 
+/-!
+# JSP-000301: consecutive powerful numbers
+
+This file formalizes Solomon W. Golomb's counterexample to the question whether
+two consecutive positive powerful numbers must contain a perfect square.
+-/
+
 namespace JustSun.JSP000301
 
 /--
@@ -51,7 +58,9 @@ lemma not_square_between {a n : ℕ}
 lemma powerful_12167 : Powerful 12167 := by
   have h : Powerful (23 ^ 3) :=
     powerful_prime_pow (p := 23) (k := 3) (by norm_num) (by norm_num)
-  convert h using 1 <;> norm_num
+  have hcalc : (23 : ℕ) ^ 3 = 12167 := by norm_num
+  rw [hcalc] at h
+  exact h
 
 /-- 12168 = 2^3 * 3^2 * 13^2 is powerful. -/
 lemma powerful_12168 : Powerful 12168 := by
@@ -63,7 +72,9 @@ lemma powerful_12168 : Powerful 12168 := by
     powerful_prime_pow (p := 13) (k := 2) (by norm_num) (by norm_num)
   have h : Powerful ((2 ^ 3) * (3 ^ 2) * (13 ^ 2)) :=
     powerful_mul (powerful_mul h2 h3) h13
-  convert h using 1 <;> norm_num
+  have hcalc : (2 : ℕ) ^ 3 * 3 ^ 2 * 13 ^ 2 = 12168 := by norm_num
+  rw [hcalc] at h
+  exact h
 
 /-- 12167 lies strictly between 110^2 and 111^2. -/
 lemma not_square_12167 : ¬ NatSquare 12167 := by
