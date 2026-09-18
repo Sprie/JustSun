@@ -1,0 +1,50 @@
+name: Verify JSP-000615 upstream proof
+
+on:
+  push:
+    paths:
+      - "evidence/JSP-000615.md"
+      - ".github/workflows/verify-jsp-000615.yml"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl https://elan.lean-lang.org/elan-init.sh -sSf | sh -s -- -y
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Fetch pinned upstream proof
+        run: |
+          git clone --filter=blob:none https://github.com/plby/lean-proofs.git upstream
+          cd upstream
+          git checkout 8822f7ddef30fadbd92e1c6ab4ed897af356af5e
+          test "$(git rev-parse HEAD)" = "8822f7ddef30fadbd92e1c6ab4ed897af356af5e"
+
+      - name: Resolve pinned dependencies
+        working-directory: upstream/src/latest
+        run: lake update
+
+      - name: Fetch Mathlib cache
+        working-directory: upstream/src/latest
+        run: lake exe cache get
+
+      - name: Build Erdos747
+        working-directory: upstream/src/latest
+        run: lake build ErdosProblems.Erdos747
+
+      - name: Axiom audit
+        working-directory: upstream/src/latest
+        run: |
+          cat > Audit747.lean <<'EOF'
+          import ErdosProblems.Erdos747
+          #check Erdos747.erdos_747
+          #check Erdos747.erdos747_asymptotic
+          #print axioms Erdos747.erdos_747
+          #print axioms Erdos747.erdos747_asymptotic
+          EOF
+          lake env lean Audit747.lean
