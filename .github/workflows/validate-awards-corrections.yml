@@ -12,6 +12,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
+          - label: JSP-000517
+            branch: jsp-000517-register-existing-lean
           - label: JSP-000699
             branch: jsp-000699-register-existing-lean
           - label: JSP-000747
