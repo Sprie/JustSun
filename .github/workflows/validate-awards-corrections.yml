@@ -66,4 +66,4 @@ jobs:
         working-directory: awards
         run: git diff --check
 
-# refresh: JSP-000861 candidate correction branch
+# refresh: JSP-000861 narrowed evidence correction
