@@ -1,4 +1,4 @@
-name: Verify JSP-000861 / Erdos 1038 candidate
+name: Verify JSP-000861 source evidence
 
 on:
   push:
@@ -8,43 +8,152 @@ on:
   workflow_dispatch:
 
 jobs:
-  verify:
+  verify-source:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install elan
+      - name: Fetch pinned original formalization
         run: |
-          curl https://elan.lean-lang.org/elan-init.sh -sSf | sh -s -- -y
-          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          git clone --filter=blob:none --no-checkout https://github.com/ShouqiaoW/erdos.git upstream-original
+          cd upstream-original
+          git sparse-checkout init --cone
+          git sparse-checkout set 1038/lean .github/workflows/erdos1038-lean.yml
+          git checkout dc20752268ede5a3548e3d63ae74e45c3cfcf78c
+          test "$(git rev-parse HEAD)" = "dc20752268ede5a3548e3d63ae74e45c3cfcf78c"
 
-      - name: Fetch pinned upstream proof
+      - name: Reject proof placeholders in executable source
+        working-directory: upstream-original/1038/lean
+        shell: bash
         run: |
-          git clone --filter=blob:none https://github.com/plby/lean-proofs.git upstream
-          cd upstream
-          git checkout 8822f7ddef30fadbd92e1c6ab4ed897af356af5e
-          test "$(git rev-parse HEAD)" = "8822f7ddef30fadbd92e1c6ab4ed897af356af5e"
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
 
-      - name: Resolve pinned dependencies
-        working-directory: upstream/src/latest
-        run: lake update
+          def code_only(source: str) -> str:
+              out = []
+              i = 0
+              block_depth = 0
+              line_comment = False
+              string_literal = False
+              escaped = False
+              while i < len(source):
+                  if line_comment:
+                      if source[i] == "\n":
+                          line_comment = False
+                          out.append("\n")
+                      else:
+                          out.append(" ")
+                      i += 1
+                  elif block_depth:
+                      if source.startswith("/-", i):
+                          block_depth += 1
+                          out.extend("  ")
+                          i += 2
+                      elif source.startswith("-/", i):
+                          block_depth -= 1
+                          out.extend("  ")
+                          i += 2
+                      else:
+                          out.append("\n" if source[i] == "\n" else " ")
+                          i += 1
+                  elif string_literal:
+                      ch = source[i]
+                      out.append("\n" if ch == "\n" else " ")
+                      i += 1
+                      if escaped:
+                          escaped = False
+                      elif ch == "\\":
+                          escaped = True
+                      elif ch == '"':
+                          string_literal = False
+                  elif source.startswith("--", i):
+                      line_comment = True
+                      out.extend("  ")
+                      i += 2
+                  elif source.startswith("/-", i):
+                      block_depth = 1
+                      out.extend("  ")
+                      i += 2
+                  elif source[i] == '"':
+                      string_literal = True
+                      out.append(" ")
+                      i += 1
+                  else:
+                      out.append(source[i])
+                      i += 1
+              return "".join(out)
 
-      - name: Fetch Mathlib cache
-        working-directory: upstream/src/latest
-        run: lake exe cache get
+          checks = {
+              "sorry": re.compile(r"(?<![A-Za-z0-9_])sorry(?![A-Za-z0-9_])"),
+              "admit": re.compile(r"(?<![A-Za-z0-9_])admit(?![A-Za-z0-9_])"),
+              "axiom": re.compile(r"(?<![A-Za-z0-9_])axiom(?![A-Za-z0-9_])"),
+              "unsafe": re.compile(r"(?<![A-Za-z0-9_])unsafe(?![A-Za-z0-9_])"),
+              "#eval": re.compile(r"#eval(?![A-Za-z0-9_])"),
+              "native_decide": re.compile(r"(?<![A-Za-z0-9_])native_decide(?![A-Za-z0-9_])"),
+          }
 
-      - name: Build Erdos1038
-        working-directory: upstream/src/latest
-        run: lake build ErdosProblems.Erdos1038
+          failures = []
+          for path in [Path("Erdos1038.lean"), *sorted(Path("Erdos1038").glob("*.lean"))]:
+              code = code_only(path.read_text())
+              for label, pattern in checks.items():
+                  if match := pattern.search(code):
+                      line = code.count("\n", 0, match.start()) + 1
+                      failures.append(f"{path}:{line}: {label}")
 
-      - name: Axiom audit
-        working-directory: upstream/src/latest
+          if failures:
+              raise SystemExit("Disallowed executable proof placeholders:\n" + "\n".join(failures))
+          PY
+
+      - name: Verify theorem scope matches Erdős 1038
+        working-directory: upstream-original/1038/lean
+        shell: bash
         run: |
-          cat > Audit1038.lean <<'EOF'
-          import ErdosProblems.Erdos1038
-          #check Erdos1038.erdos_1038
-          #check Erdos1038.mainTheorem
-          #print axioms Erdos1038.erdos_1038
-          #print axioms Erdos1038.mainTheorem
-          EOF
-          lake env lean Audit1038.lean
+          python3 - <<'PY'
+          from pathlib import Path
+
+          defs = Path("Erdos1038/Definitions.lean").read_text()
+          stmt = Path("Erdos1038/Statement.lean").read_text()
+          proof = Path("Erdos1038/CompleteProof.lean").read_text()
+
+          required_defs = [
+              "def IsAdmissible",
+              "f.Monic",
+              "f ≠ 1",
+              "Set.Icc (-1 : ℝ) 1",
+              "def sublevelVolume",
+              "{x | |f.eval x| < 1}",
+              "def infimumLength",
+              "def supremumLength",
+          ]
+          required_stmt = [
+              "infimumLength = ENNReal.ofReal L",
+              "supremumLength = ENNReal.ofReal (2 * Real.sqrt 2)",
+          ]
+          required_proof = [
+              "theorem mainTheorem : MainTheorem",
+          ]
+
+          missing = [x for x in required_defs if x not in defs]
+          missing += [x for x in required_stmt if x not in stmt]
+          missing += [x for x in required_proof if x not in proof]
+          if missing:
+              raise SystemExit("Statement-scope guard failed; missing: " + repr(missing))
+          PY
+
+      - name: Verify original project documents high-memory kernel audit
+        working-directory: upstream-original
+        shell: bash
+        run: |
+          grep -F 'runs-on: [self-hosted, linux, x64, erdos1038-large]' .github/workflows/erdos1038-lean.yml
+          grep -F 'Full Lean kernel build and exact axiom audit' .github/workflows/erdos1038-lean.yml
+          grep -F 'Erdos1038/FinalAxiomAudit.lean' .github/workflows/erdos1038-lean.yml
+
+      - name: Verify pinned integrated entrypoint metadata
+        shell: bash
+        run: |
+          curl -fsSL             https://raw.githubusercontent.com/plby/lean-proofs/8822f7ddef30fadbd92e1c6ab4ed897af356af5e/src/latest/ErdosProblems/Erdos1038.lean             -o /tmp/Erdos1038-integrated.lean
+          grep -F 'theorem erdos_1038' /tmp/Erdos1038-integrated.lean
+          grep -F 'infimumLength = ENNReal.ofReal L' /tmp/Erdos1038-integrated.lean
+          grep -F 'supremumLength = ENNReal.ofReal (2 * Real.sqrt 2)' /tmp/Erdos1038-integrated.lean
+          grep -F "depends on axioms: [propext, Classical.choice, Quot.sound]" /tmp/Erdos1038-integrated.lean
