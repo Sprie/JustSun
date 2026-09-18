@@ -3,6 +3,13 @@
 
 ## Ready for upstream submission
 
+
+# Participation status
+
+This repository tracks Sprie's participation work for The Justin Sun Prize.
+
+## Submitted upstream
+
 ### JSP-000613 — existing complete proof registration
 
 - Correspondence: JSP-000613 ↔ Erdős Problem 745
@@ -16,19 +23,15 @@
 - Awards validation: https://github.com/Sprie/JustSun/actions/runs/35331847773 — success
 - Final awards branch head: `59eb5663c25212d48aed11d836d7130a1d44d364`
 - Final diff: 2 files, +4/-3, catalog/index metadata only.
-- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000613-register-existing-lean?expand=1
-- Competition check: no matching JSP-000613 PR or open issue found.
+- Upstream PR: https://github.com/TheJustinSunPrize/awards/pull/1153
+- PR head: `59eb5663c25212d48aed11d836d7130a1d44d364`; final diff: 2 files, +4/-3; mergeable and non-draft at submission time.
+- Official upstream workflows currently report `action_required`, consistent with maintainer approval being required before fork workflows run.
 
 
 
 
 
 
-# Participation status
-
-This repository tracks Sprie's participation work for The Justin Sun Prize.
-
-## Submitted upstream
 
 ### JSP-000615 — existing complete proof registration
 
