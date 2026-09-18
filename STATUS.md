@@ -24,10 +24,10 @@
 - Awards fork branch: `Sprie/awards:jsp-000085-register-existing-lean`
 - Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35324414655 — success, 9407 jobs
 - Axioms: `[propext, Classical.choice, Quot.sound]`
-- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35326574844 — success
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35326829737 — success
 - Prior PR #934 was withdrawn after its separate formalization was found to rely on local axioms; no open JSP-000085 PR or issue was found before this registration.
-- Final awards branch head: `ba00bebf75f4435ff3f1dd2daf25a4a864590b45`
-- Final diff: 2 files, catalog/index metadata only.
+- Final awards branch head: `dcaaa0420149739232b77aeebbbebbe3ff6da887`
+- Final diff: 1 file, catalog metadata only.
 - Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000085-register-existing-lean?expand=1
 - Upstream PR creation through the connected GitHub integration is not permitted; the branch is ready for manual PR creation from the compare page.
 
@@ -49,29 +49,33 @@
 
 
 
-### JSP-000173 — complete Fox--Pohoata proof registration
-
-- Correspondence: JSP-000173 ↔ Erdős Problem 179
-- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
-- Terminal theorem: `Erdos179.erdos_179`
-- Evidence: [evidence/JSP-000173.md](evidence/JSP-000173.md)
-- PR draft: [submissions/JSP-000173-PR.md](submissions/JSP-000173-PR.md)
-- Awards fork branch: `Sprie/awards:jsp-000173-register-existing-lean`
-- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35324132735 — success
-- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35323565421 — success, 8744 jobs
-- Axioms: `[propext, Classical.choice, Quot.sound]`
-- Prior PR #999 was withdrawn after its separate formalization was found to rely on local axioms; no open JSP-000173 PR or issue was found before this registration.
-- Final awards branch head: `1b923b38b760d3760d3e22650f284bc352cd2275`
-- Final diff: 2 files, catalog/index metadata only.
-- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000173-register-existing-lean?expand=1
-- Upstream PR creation through the connected GitHub integration is not permitted; the branch is ready for manual PR creation from the compare page.
-
-
 # Participation status
 
 This repository tracks Sprie's participation work for The Justin Sun Prize.
 
 ## Submitted upstream
+
+
+### JSP-000173 — complete Fox--Pohoata proof registration
+
+Role of Sprie: **source discovery, statement correspondence review, reproducible verification, catalog correction**.
+
+Sprie does **not** claim mathematical-solution or Lean-formalization authorship.
+
+- Correspondence: JSP-000173 ↔ Erdős Problem 179
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Terminal theorem: `Erdos179.erdos_179`
+- Evidence: [evidence/JSP-000173.md](evidence/JSP-000173.md)
+- PR text: [submissions/JSP-000173-PR.md](submissions/JSP-000173-PR.md)
+- Upstream PR: https://github.com/TheJustinSunPrize/awards/pull/1120
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35323565421 — success, 8744 jobs
+- Axioms: `[propext, Classical.choice, Quot.sound]`
+- Final awards validation: https://github.com/Sprie/JustSun/actions/runs/35324132735 — success
+- Awards fork branch: `Sprie/awards:jsp-000173-register-existing-lean`
+- PR head: `22e1031b456472ad4623a7d202210b176a050740`; final diff: 1 file, catalog metadata only.
+- PR was mergeable and non-draft at the latest check.
+- Prior PR #999 was withdrawn after its separate formalization was found to rely on local axioms.
+
 
 ### JSP-000568 — complete Hall phase-transition proof registration
 
