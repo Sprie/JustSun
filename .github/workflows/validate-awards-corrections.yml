@@ -84,7 +84,7 @@ jobs:
         working-directory: awards
         run: git diff --check
 
-# refresh: JSP-000679 correction branch
+# refresh: final JSP-000664 and JSP-000679 evidence pins
 # refresh: JSP-000173 existing-proof correction branch
 # final refresh: JSP-000173 green evidence pin
 # refresh: JSP-000085 existing-proof correction branch
