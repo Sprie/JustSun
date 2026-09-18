@@ -34,23 +34,6 @@
 
 ## Ready for upstream submission
 
-### JSP-000568 — complete Hall phase-transition proof registration
-
-- Correspondence: JSP-000568 ↔ Erdős 697
-- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
-- Terminal theorems: `Erdos697.erdos_697`; `Erdos697.erdos_697_sharp_transition`
-- Evidence: [evidence/JSP-000568.md](evidence/JSP-000568.md)
-- Awards fork branch: `Sprie/awards:jsp-000568-register-full-existing-lean`
-- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35325240251 — success
-- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35322307299 — success
-- Axioms for both terminal theorems: `[propext, Classical.choice, Quot.sound]`
-- Final awards branch head: `7caa146fbc24c7cda401adea464be65f017db5d8`
-- Final diff: 2 files, catalog/index metadata only.
-- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000568-register-full-existing-lean?expand=1
-- Existing PR #506/ is partial only and explicitly excludes Hall's critical exponent and both phase-transition limits.
-
-
-
 
 ### JSP-000173 — complete Fox--Pohoata proof registration
 
@@ -70,27 +53,31 @@
 - Upstream PR creation through the connected GitHub integration is not permitted; the branch is ready for manual PR creation from the compare page.
 
 
-### JSP-000568 — complete Hall phase-transition proof registration
-
-- Correspondence: JSP-000568 ↔ Erdős 697
-- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
-- Terminal theorems: `Erdos697.erdos_697`; `Erdos697.erdos_697_sharp_transition`
-- Evidence: [evidence/JSP-000568.md](evidence/JSP-000568.md)
-- Awards fork branch: `Sprie/awards:jsp-000568-register-full-existing-lean`
-- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35325240251 — success
-- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35322307299 — success
-- Axioms for both terminal theorems: `[propext, Classical.choice, Quot.sound]`
-- Final awards branch head: `7caa146fbc24c7cda401adea464be65f017db5d8`
-- Final diff: 2 files, catalog/index metadata only.
-- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000568-register-full-existing-lean?expand=1
-- Existing PR #506/ is partial only and explicitly excludes Hall's critical exponent and both phase-transition limits.
-
-
 # Participation status
 
 This repository tracks Sprie's participation work for The Justin Sun Prize.
 
 ## Submitted upstream
+
+### JSP-000568 — complete Hall phase-transition proof registration
+
+Role of Sprie: **source discovery, statement correspondence review, reproducible verification, catalog correction**.
+
+Sprie does **not** claim mathematical-solution or Lean-formalization authorship.
+
+- Correspondence: JSP-000568 ↔ Erdős Problem 697
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Terminal theorems: `Erdos697.erdos_697`; `Erdos697.erdos_697_sharp_transition`
+- Evidence: [evidence/JSP-000568.md](evidence/JSP-000568.md)
+- Upstream PR: https://github.com/TheJustinSunPrize/awards/pull/1124
+- PR text: [submissions/JSP-000568-PR.md](submissions/JSP-000568-PR.md)
+- Awards fork branch: `Sprie/awards:jsp-000568-register-full-existing-lean`
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35322307299 — success
+- Axioms for both terminal theorems: `[propext, Classical.choice, Quot.sound]`
+- Final awards validation: https://github.com/Sprie/JustSun/actions/runs/35325240251 — success
+- PR head: `7caa146fbc24c7cda401adea464be65f017db5d8`; final diff: 2 files, +4/-3; mergeable and non-draft at submission time.
+- Existing PR #506 is partial only and explicitly excludes Hall's critical exponent and both phase-transition limits.
+- Official upstream workflows currently report `action_required` with no jobs started, consistent with maintainer approval being required before fork workflows run.
 
 ### JSP-000861 — complete-solution and Lean-formalization evidence registration
 
