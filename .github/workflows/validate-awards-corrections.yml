@@ -61,3 +61,5 @@ jobs:
       - name: Diff hygiene
         working-directory: awards
         run: git diff --check
+
+# refresh: JSP-000517 final branch
