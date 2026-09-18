@@ -1,5 +1,17 @@
 ## In verification
 
+### JSP-000613 — existing complete proof registration
+
+- Correspondence: JSP-000613 ↔ Erdős Problem 745
+- Upstream proof snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Critical theorem: `Erdos745.erdos_745`
+- Additional selected roots: `Erdos745.erdos_745_supercritical`, `Erdos745.erdos745_noncritical_asymptotic`, `Erdos745.erdos745_noncritical`
+- Evidence: [evidence/JSP-000613.md](evidence/JSP-000613.md)
+- Awards fork branch: `Sprie/awards:jsp-000613-register-existing-lean`
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35331315992 — running
+- Competition check: no matching JSP-000613 PR or open issue found.
+
+
 
 ## Ready for upstream submission
 
