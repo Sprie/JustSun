@@ -2,23 +2,6 @@
 
 This repository tracks Sprie's participation work for The Justin Sun Prize.
 
-## Ready for upstream submission
-
-### JSP-000517 — existing-proof evidence registration
-
-Role of Sprie: **source discovery, statement correspondence review, reproducible verification, catalog correction**.
-
-Sprie does **not** claim mathematical-solution or Lean-formalization authorship.
-
-- Upstream proof repository: `plby/lean-proofs`
-- Pinned upstream snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
-- Main theorem: `Erdos636.erdos_636`
-- Evidence: [evidence/JSP-000517.md](evidence/JSP-000517.md)
-- Awards fork branch: `Sprie/awards:jsp-000517-register-existing-lean`
-- PR text: [submissions/JSP-000517-PR.md](submissions/JSP-000517-PR.md)
-- Proof reproduction CI: https://github.com/Sprie/JustSun/actions/runs/35317022453 — success, 8790 jobs
-- Awards catalog validation: https://github.com/Sprie/JustSun/actions/runs/35317085977 — success
-
 ## In verification
 
 ### JSP-000916 — existing-proof evidence registration
@@ -31,6 +14,24 @@ Sprie does **not** claim mathematical-solution or Lean-formalization authorship.
 - Proof reproduction CI: https://github.com/Sprie/JustSun/actions/runs/35318007706 — running
 
 ## Submitted upstream
+
+### JSP-000517 — existing-proof evidence registration
+
+Role of Sprie: **source discovery, statement correspondence review, reproducible verification, catalog correction**.
+
+Sprie does **not** claim mathematical-solution or Lean-formalization authorship.
+
+- Upstream proof repository: `plby/lean-proofs`
+- Pinned upstream snapshot: `8822f7ddef30fadbd92e1c6ab4ed897af356af5e`
+- Main theorem: `Erdos636.erdos_636`
+- Evidence: [evidence/JSP-000517.md](evidence/JSP-000517.md)
+- Upstream PR: https://github.com/TheJustinSunPrize/awards/pull/1095
+- PR text: [submissions/JSP-000517-PR.md](submissions/JSP-000517-PR.md)
+- Awards fork branch: `Sprie/awards:jsp-000517-register-existing-lean`
+- Proof reproduction CI: https://github.com/Sprie/JustSun/actions/runs/35317022453 — success, 8790 jobs
+- Final awards catalog validation: https://github.com/Sprie/JustSun/actions/runs/35318550519 — success
+- Official upstream workflows currently report `action_required` with no jobs started, consistent with maintainer approval being required before fork workflows run.
+- PR head: `8429e2dc4f1b3e45ccd6138306511eeb97d46f5d`; changed files: 2; mergeable at submission time.
 
 ### JSP-000699 — existing-proof evidence registration
 
