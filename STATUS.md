@@ -1,4 +1,4 @@
-## In verification
+## Ready for upstream submission
 
 ### JSP-000173 — complete Fox--Pohoata proof registration
 
@@ -12,6 +12,10 @@
 - Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35323565421 — success, 8744 jobs
 - Axioms: `[propext, Classical.choice, Quot.sound]`
 - Prior PR #999 was withdrawn after its separate formalization was found to rely on local axioms; no open JSP-000173 PR or issue was found before this registration.
+- Final awards branch head: `1b923b38b760d3760d3e22650f284bc352cd2275`
+- Final diff: 2 files, catalog/index metadata only.
+- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000173-register-existing-lean?expand=1
+- Upstream PR creation through the connected GitHub integration is not permitted; the branch is ready for manual PR creation from the compare page.
 
 
 ### JSP-000568 — complete Hall phase-transition proof registration
