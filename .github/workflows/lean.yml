@@ -9,4 +9,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: leanprover/lean-action@v1
+
+      - name: Install Lean toolchain
+        uses: leanprover/lean-action@v1
+        with:
+          auto-config: false
+          use-mathlib-cache: false
+          use-github-cache: false
+
+      - name: Resolve dependencies
+        run: ~/.elan/bin/lake update
+
+      - name: Fetch Mathlib cache
+        run: ~/.elan/bin/lake exe cache get
+
+      - name: Build
+        run: ~/.elan/bin/lake build
