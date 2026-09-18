@@ -12,6 +12,8 @@
 - Competition check: no matching JSP-000590 PR or open issue found.
 
 
+## Ready for upstream submission
+
 ### JSP-000085 — complete Erdős discrepancy proof registration
 
 - Correspondence: JSP-000085 ↔ Erdős Problem 67
@@ -22,10 +24,13 @@
 - Awards fork branch: `Sprie/awards:jsp-000085-register-existing-lean`
 - Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35324414655 — success, 9407 jobs
 - Axioms: `[propext, Classical.choice, Quot.sound]`
-- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35324519309 — success
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35326574844 — success
 - Prior PR #934 was withdrawn after its separate formalization was found to rely on local axioms; no open JSP-000085 PR or issue was found before this registration.
+- Final awards branch head: `ba00bebf75f4435ff3f1dd2daf25a4a864590b45`
+- Final diff: 2 files, catalog/index metadata only.
+- Submission compare page: https://github.com/TheJustinSunPrize/awards/compare/main...Sprie:jsp-000085-register-existing-lean?expand=1
+- Upstream PR creation through the connected GitHub integration is not permitted; the branch is ready for manual PR creation from the compare page.
 
-## Ready for upstream submission
 
 ### JSP-000586 — existing complete proof registration
 
@@ -52,7 +57,7 @@
 - Evidence: [evidence/JSP-000173.md](evidence/JSP-000173.md)
 - PR draft: [submissions/JSP-000173-PR.md](submissions/JSP-000173-PR.md)
 - Awards fork branch: `Sprie/awards:jsp-000173-register-existing-lean`
-- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35323712973 — success
+- Awards validation: https://github.com/Sprie/JustSun/actions/runs/35324132735 — success
 - Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35323565421 — success, 8744 jobs
 - Axioms: `[propext, Classical.choice, Quot.sound]`
 - Prior PR #999 was withdrawn after its separate formalization was found to rely on local axioms; no open JSP-000173 PR or issue was found before this registration.
