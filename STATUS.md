@@ -9,7 +9,8 @@
 - PR draft: [submissions/JSP-000173-PR.md](submissions/JSP-000173-PR.md)
 - Awards fork branch: `Sprie/awards:jsp-000173-register-existing-lean`
 - Awards validation: https://github.com/Sprie/JustSun/actions/runs/35323712973 — success
-- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35323565421 — running
+- Proof reproduction: https://github.com/Sprie/JustSun/actions/runs/35323565421 — success, 8744 jobs
+- Axioms: `[propext, Classical.choice, Quot.sound]`
 - Prior PR #999 was withdrawn after its separate formalization was found to rely on local axioms; no open JSP-000173 PR or issue was found before this registration.
 
 
